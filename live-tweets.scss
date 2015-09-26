@@ -1,0 +1,83 @@
+.live-tweets {
+	.tweet.tile {
+		background-color: #eef2f3;
+		box-shadow: none;
+		text-align: left;
+		padding: 20px;
+		position: relative;
+		height: 220px;
+		@include media($md-bp) {
+			height: 262px;
+		}
+		#twitter-widget-0 .EmbeddedTweet {
+			  overflow: hidden;
+			  cursor: pointer;
+			  background-color: transparent;
+			  border: none;
+			  border-radius: 0;
+			  max-width: 520px;
+		}
+		.avatar {
+			border-radius: 15px;
+			display: inline-block;
+			margin-right: 5px;
+		}
+		.twitter-id{
+			display: inline-block;
+			vertical-align: top;
+			text-transform: uppercase;
+			margin-bottom: 20px;
+			h2 {
+				margin-bottom: 0;
+			}
+			h2.screen-name {
+				font-size: 12px;
+				color: $light-gray;
+			}
+		}
+		p {
+			font-size: 15px;
+			color: $light-gray;
+		}
+		.time {
+			font-size: 12px;
+			letter-spacing: 1px;
+		}
+		.twitter-functions {
+			list-style: none;
+			position: absolute;
+			bottom: 17px;
+			li{
+				float: left;
+				margin-right: 15px;
+			}
+		}
+	}
+	/*.tweet.tile:nth-child(4n+3)*/
+	@include media($sm-bp) {
+		.tweet.tile:nth-child(2n+1) {
+		    margin-right: 2.0848%;
+		}
+		.tweet.tile:nth-child(2n+2) {
+			margin-right: 0;
+		}
+	}
+	@include media($md-bp) {
+		.tweet.tile:nth-child(3n+1),
+		.tweet.tile:nth-child(3n+2) {
+		    margin-right: 2.0848%;
+		}
+		.tweet.tile:nth-child(3n+3) {
+			margin-right: 0;
+		}
+	}
+	@include media($lg-bp) {
+		.tweet.tile:nth-child(4n+2),
+		.tweet.tile:nth-child(4n+3) {
+		    margin-right: 2.0848%;
+		}
+		.tweet.tile:nth-child(4n+4) {
+		    margin-right: 0;
+		}
+	}
+}
